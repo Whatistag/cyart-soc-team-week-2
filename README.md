@@ -1,4 +1,4 @@
-# cyart-soc-team
+# SOC-OPERATIONS-REPORT
 
 PART 1 – THEORETICAL KNOWLEDGE
 ________________________________________
