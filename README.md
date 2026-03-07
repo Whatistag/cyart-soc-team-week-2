@@ -146,8 +146,9 @@ Install:
 
 Verify:
 
-msfconsole
- 
+    msfconsole
+ <img width="682" height="530" alt="image" src="https://github.com/user-attachments/assets/d7d4696f-5a6d-47b3-b4e6-561cccc07c9a" />
+
 🧱 MACHINE 2 – Kali_wazuh Server (SOC Machine)
 
 This is Main SOC Server.
@@ -164,16 +165,17 @@ You will install:
 ________________________________________
 ✅ Step 1 – Install Wazuh (On Ubuntu Only)
 
-curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh
+    curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh
 
-sudo bash wazuh-install.sh -a
+    sudo bash wazuh-install.sh -a
 
 After install:
 
 Access:
 
-https://<Ubuntu-IP>
- 
+    https://<Kali_wazuh_Server-IP>
+ <img width="941" height="452" alt="image" src="https://github.com/user-attachments/assets/126a1aed-a7d0-4479-8d05-68d86c7c0ac4" />
+
 ________________________________________
 
 
@@ -181,47 +183,44 @@ ________________________________________
 
 Install Java:
 
-sudo apt install openjdk-11-jdk -y
+    sudo apt install openjdk-11-jdk -y
 
 Install Cassandra:
 
-sudo apt install cassandra -y
+    sudo apt install cassandra -y
 
 Install TheHive:
 
-wget https://github.com/TheHive-Project/TheHive/releases/download/4.1.24/thehive_4.1.24-1_all.deb
-
-sudo dpkg -i thehive_4.1.24-1_all.deb
-
-sudo systemctl start thehive
+    sudo systemctl start thehive
 
 Access:
 
-http://<Ubuntu-IP>:9000
+http://<Kali_wazuh_server-IP>:9000
+<img width="941" height="451" alt="image" src="https://github.com/user-attachments/assets/b47ee92a-d07f-483a-ae24-b6f7989f63dc" />
 
  ________________________________________
 ✅ Step 3 – Install CrowdSec (On Ubuntu Only)
 
-curl -s https://packagecloud.io/install/repositories/crowdsec/crowdsec/script.deb.sh | sudo bash
-
-sudo apt install crowdsec -y
+    sudo apt install crowdsec -y
 
 Block attacker IP later using:
 
-sudo cscli decisions add --ip <attacker-ip> --duration 24h
+    sudo cscli decisions add --ip <attacker-ip> --duration 24h
 ________________________________________
 
 ✅ Step 4 – Install Velociraptor Server (On Ubuntu Only)
 
-wget https://github.com/Velocidex/velociraptor/releases/latest/download/velociraptor-v0.6.6-linux-amd64
+    wget https://github.com/Velocidex/velociraptor/releases/latest/download/velociraptor-v0.6.6-linux-amd64
 
-chmod +x velociraptor-v0.6.6-linux-amd64
+    chmod +x velociraptor-v0.6.6-linux-amd64
 
-sudo ./velociraptor-v0.6.6-linux-amd64 gui
+    sudo ./velociraptor-v0.6.6-linux-amd64 gui
 
 Access:
 
-https://<Ubuntu-IP>:8889
+    https://<Kali_wahuz_server-IP>:8889
+<img width="941" height="452" alt="image" src="https://github.com/user-attachments/assets/27649475-1ae0-40e4-843d-17fcdea1fcee" />
+ 
  ________________________________________
 🧱 MACHINE 3 – Windows 10 (Victim)
 
@@ -237,7 +236,7 @@ ________________________________________
 
 Download Windows Agent from:
 
-https://packages.wazuh.com
+    https://packages.wazuh.com
 
 During installation:
 
@@ -245,11 +244,12 @@ Enter Ubuntu IP as Manager.
 
 Then on Ubuntu:
 
-sudo /var/ossec/bin/manage_agents
+    sudo /var/ossec/bin/manage_agents
 
 Add agent → Copy key → Paste in Windows agent.
 
 Restart Windows agent service.
+<img width="665" height="349" alt="image" src="https://github.com/user-attachments/assets/740fbe8b-b682-47dd-ae1f-0bff587df6e5" />
  
 ________________________________________
 ✅ Step 2 – Install Velociraptor Agent
@@ -258,9 +258,10 @@ Download Windows binary.
 
 Run as administrator:
 
-velociraptor.exe client -c client.config.yaml
+    velociraptor.exe client -c client.config.yaml
 
 Connect to Ubuntu Velociraptor server.
+<img width="977" height="469" alt="image" src="https://github.com/user-attachments/assets/c017d5be-512a-4264-bd9a-15b5294a3e62" />
 
  
 ✅ Step 3 – Install FTK Imager
@@ -282,6 +283,8 @@ Just:
 
 •	Get IP address using:
 
-ifconfig
+    ifconfig
+ <img width="941" height="522" alt="image" src="https://github.com/user-attachments/assets/d158ce8b-32bd-4c60-a623-9059277916ec" />
+
  ________________________________________
 
