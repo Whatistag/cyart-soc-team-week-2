@@ -288,3 +288,41 @@ Just:
 
  ________________________________________
 
+# SOC Alert Management Practice Report
+1. Objective
+
+The purpose of this exercise is to practice SOC alert handling by creating an alert classification system, prioritizing alerts using severity scoring, documenting response procedures, creating incident tickets, and practicing escalation processes.
+
+2. Alert Classification System
+
+<img width="1920" height="691" alt="SOC Alert Classification Matrix" src="https://github.com/user-attachments/assets/f7b9be45-9ad1-4fd6-8194-9a80e7b40b2a" />
+
+Example Mock Alert
+
+Alert message:
+
+Phishing Email Detected – Suspicious Link
+User received email containing link to malicious website.
+
+Mapped to:
+
+MITRE Technique → T1566 (Phishing)
+
+3. Alert Prioritization Using CVSS
+
+<img width="1024" height="521" alt="Screenshot (104)" src="https://github.com/user-attachments/assets/997800d0-d74d-4ee2-a360-bef00284a07a" />
+
+4. Wazuh Alert Dashboard
+
+In Wazuh:
+
+<img width="1920" height="922" alt="windows_agent_failed_logon_attemp_alert_found" src="https://github.com/user-attachments/assets/72baa5dd-f3c2-4f03-9187-b93d15d8ff1a" />
+
+5. Incident Ticket in TheHive
+
+Create a case in TheHive.
+
+Example incident ticket:
+
+<img width="1920" height="922" alt="VirtualBox_kali_wazuh_05_03_2026_12_43_21" src="https://github.com/user-attachments/assets/0dce994d-e899-4a0b-85e2-ca8a87f98e62" />
+
